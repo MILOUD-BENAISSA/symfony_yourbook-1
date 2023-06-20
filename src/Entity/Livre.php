@@ -43,6 +43,10 @@ class Livre
     {
         $this->genres = new ArrayCollection();
     }
+    public function __toString()
+    {
+        return $this->getTitre().'-'.$this->getEditeur().'-'.$this->getAuteur();
+    }
 
     public function getId(): ?int
     {
